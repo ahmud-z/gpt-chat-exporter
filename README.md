@@ -12,7 +12,7 @@
 ### Step 3: Load the Extension
   - Click "Load unpacked"
   - Select the folder you cloned or unzipped in Step 1
-  - You should now see the "ChatGPT Chat Exporter" icon in your toolbar
+  - You should now see the "ChatGPT Chat Exporter" icon in your toolbar/extensions list
 
 ### Step 4: Use the Extension
   - Go to https://chat.openai.com
