@@ -1,3 +1,4 @@
+## Installation Guide:
 ### Step 1: Download the Extension
   - Visit: https://github.com/ahmud-z/gpt-chat-exporter/
   - Click "Code" → "Download ZIP"
