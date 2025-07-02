@@ -101,6 +101,17 @@
     color: #555;
     margin: 1em 0;
   }
+
+  table, th, td {
+  border: 1px solid #999 !important;
+  border-collapse: collapse !important;
+  padding: 8px !important;
+}
+
+table {
+  width: 100% !important;
+  margin-bottom: 20px;
+}
 </style>
     </head>
     <body>${printable.innerHTML}</body>
