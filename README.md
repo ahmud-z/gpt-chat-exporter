@@ -18,3 +18,7 @@
   - Go to https://chat.openai.com
   - Open any conversation
   - Click the extension icon and save the chat
+
+### Video Tutorial:
+https://github.com/user-attachments/assets/3b4b38ee-dcd3-447a-a642-2bd3fb45b161
+
