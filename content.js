@@ -30,6 +30,18 @@
     // Remove "Copy" and "Edit" buttons
     cloned.querySelectorAll('button, svg, [aria-label="Copy code"], [aria-label="Edit"]').forEach(el => el.remove());
 
+    // If it is a user message, prepend "Prompt:" label
+    if (msg.getAttribute('data-message-author-role') === 'user') {
+      const label = document.createElement('div');
+      label.textContent = 'Prompt:';
+      label.style.fontSize = '12px';
+      label.style.fontWeight = 'bold';
+      label.style.marginBottom = '6px';
+      label.style.color = '#333';
+
+      cloned.insertBefore(label, cloned.firstChild);
+    }
+
     printable.appendChild(cloned);
   });
 
@@ -123,3 +135,24 @@ table {
   await delay(300);
   printWindow.print();
 })();
+
+for (const msg of messages) {
+  const cloned = msg.cloneNode(true);
+
+  // Try to extract structured card content manually
+  const structuredBlocks = cloned.querySelectorAll('[class*="rounded-xl"]');
+  structuredBlocks.forEach(block => {
+    block.style.border = "1px solid #aaa";
+    block.style.padding = "16px";
+    block.style.borderRadius = "8px";
+    block.style.background = "#f9f9f9";
+    block.style.color = "#000";
+    block.style.overflow = "visible";
+  });
+
+  // Remove copy/edit buttons
+  cloned.querySelectorAll('button, svg, [aria-label="Copy code"], [aria-label="Edit"]').forEach(el => el.remove());
+
+  // Append to printable view
+  printable.appendChild(cloned);
+}
